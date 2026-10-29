@@ -166,14 +166,75 @@ Console.WriteLine("Acesso Liberado");*/
 
 // Console.WriteLine(Somar(5,3));
 
-int [] numeros = {10,20,30,40,50}; // instanciando o array ja definindo seus valores e posições
+// int [] numeros = {10,20,30,40,50}; // instanciando o array ja definindo seus valores e posições
 
-string [] nomes = new string [3]; // Criando um arreay que ja possui 3 posições sem valores definidos 
+// string [] nomes = new string [3]; // Criando um arreay que ja possui 3 posições sem valores definidos 
 
-nomes[0] = "Ana";
-nomes[1] = "Bruno";
-nomes[2] = "Carla";
+// nomes[0] = "Ana";
+// nomes[1] = "Bruno";
+// nomes[2] = "Carla";
 
-Console.WriteLine(nomes [0]);
-Console.WriteLine(nomes [1]);
-Console.WriteLine(nomes [2]);
+// Console.WriteLine(nomes [0]);
+// Console.WriteLine(nomes [1]);
+// Console.WriteLine(nomes [2]);
+
+// //ForEach
+
+// foreach (var Numero in numeros)
+// {
+//     Console.WriteLine(Numero);
+// }
+
+//Listas: é uma coleção que armazena elementos de mesmo tipo e permite aumentar ou diminuir sua quantidade durante a execução
+
+//List<T>: listas genéricas
+// using System.Reflection.Metadata;
+
+// List<string> nomes = new List<string>();
+// nomes.Add("Ana");
+// nomes.Add("Bruno");
+// nomes.Add("Carla");
+
+// Console.WriteLine(nomes.Count);
+
+
+// List<int> numbers = new List<int> {5,12,18,25,30};
+
+// nomes.Remove("Bruno");
+// Console.WriteLine(nomes.Count);
+
+// Console.WriteLine(nomes.Contains("Ana"));
+
+// int Encontrado = numbers.Find(n => n>20);
+// Console.WriteLine(Encontrado);
+
+// string? nome_Encontrado = nomes.Find(nome => nome.StartsWith("C"));
+
+// Console.WriteLine(nome_Encontrado);
+
+//Dicionario: Dictionary<Tkey,Tvalue>
+
+Dictionary<int,string> Produtos = new Dictionary<int, string>();
+
+Produtos.Add(101,"Notebook");
+Produtos.Add(102,"Mouse");
+Produtos.Add(103,"Teclado");
+
+Console.WriteLine(Produtos[101]);
+
+if(Produtos.ContainsKey(104))
+{
+ Console.WriteLine(Produtos[104]);
+}
+
+else
+{
+    Console.WriteLine("Produto Não Encontrado.");
+}
+
+foreach(var produto in Produtos)
+{
+    Console.WriteLine(
+        $"Codigo : {Produto.key} - Nome: {produto.Value}"
+    );
+}
